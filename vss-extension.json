@@ -14,14 +14,19 @@
     ],
     "contributions": [
         {
-            "id": "my-hub",
-            "type": "ms.vss-web.hub",
+            "id": "export-test-plan-menu-item",
+            "type": "ms.vss-web.action",
             "targets": [
-                "ms.vss-code-web.code-hub-group"
+                "ms.vss-test-web.test-run-grid-menu"
             ],
             "properties": {
-                "name": "My Hub",
-                "uri": "my-hub.html"
+                "text": "Sample build definition menu item",
+                "uri": "dist/Menu/Menu.html",
+                "icon": {
+                    "light": "static/add-grey.png",
+                    "dark": "static/add-green.png"
+                },
+                "registeredObjectId": "sample-build-menu"
             }
         }
     ],
