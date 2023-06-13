@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "proexporter",
     "publisher": "amd9",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "name": "ProExporter",
     "description": "Azure DevOps extension for exporting Work items in various output formats",
     "public": false,
@@ -31,7 +31,8 @@
                 "text": "Export test data",
                 "title": "Export test data",
                 "icon": "static/export.png",
-                "uri": "dist/export.html"
+                "uri": "dist/Exporter.html",
+                "registeredObjectId": "export-test-data"
             }
         }
     ],
