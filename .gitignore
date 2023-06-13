@@ -399,3 +399,6 @@ FodyWeavers.xsd
 
 # VSIX extensions
 *.vsix
+
+# Extension build output directory
+dist/*
