@@ -31,7 +31,7 @@
                 "text": "Export test data",
                 "title": "Export test data",
                 "icon": "static/export.png",
-                "uri": "export.html"
+                "uri": "dist/export.html"
             }
         }
     ],
@@ -41,7 +41,7 @@
             "addressable": true
         },
         {
-            "path": "export.html",
+            "path": "dist",
             "addressable": true
         }
     ]
