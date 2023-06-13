@@ -17,28 +17,24 @@
             "id": "export-test-plan-menu-item",
             "type": "ms.vss-web.action",
             "targets": [
-                "ms.vss-test-web.test-run-grid-menu"
+                "ms.vss-test-web.test-plans-suites-context"
             ],
             "properties": {
-                "text": "Sample build definition menu item",
-                "uri": "dist/Menu/Menu.html",
-                "icon": {
-                    "light": "static/export.png",
-                    "dark": "static/export.png"
-                },
-                "registeredObjectId": "sample-build-menu"
+                "text": "Export test data",
+                "title": "Export test data",
+                "icon": "static/export.png",
+                "uri": "export.html"
             }
         }
     ],
     "files": [
         {
-            "path": "my-hub.html",
+            "path": "static",
             "addressable": true
         },
         {
-            "path": "node_modules/azure-devops-extension-sdk/lib",
-            "addressable": true,
-            "packagePath": "lib"
+            "path": "my-hub.html",
+            "addressable": true
         }
     ]
 }
