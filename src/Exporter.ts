@@ -2,7 +2,7 @@ import * as SDK from "azure-devops-extension-sdk";
 import { CommonServiceIds, getClient, IHostPageLayoutService, IProjectPageService, IProjectInfo } from "azure-devops-extension-api";
 import { TestPlanRestClient, TestSuite, TestCase } from "azure-devops-extension-api/TestPlan";
 import { PagedList } from "azure-devops-extension-api/WebApi/WebApi";
-import { xml2json } from 'xml-js';
+import { xml2js } from 'xml-js';
 
 
 SDK.register("export-test-data", () => {
@@ -29,10 +29,16 @@ SDK.register("export-test-data", () => {
 
                 const casesWithSteps = suiteTestCases.reduce((acc, { workItem }) => {
                     const { name, workItemFields } = workItem;
-                    const stepsField = workItemFields.find(field => field['Microsoft.VSTS.TCM.Steps']);
-                    const stepsData = xml2json(stepsField['Microsoft.VSTS.TCM.Steps']);
+                    const stepsField = workItemFields.find(field => field['Microsoft.VSTS.TCM.Steps']);  
+                    const { steps: { step: stepsData }} = xml2js(stepsField['Microsoft.VSTS.TCM.Steps'], { compact: true }) as any;
 
-                    return [ ...acc, { name, steps: stepsData}];
+                    const steps = stepsData.map((step: any, index: number) => {
+                        const [ actionData, expectedResultData ] = step.parameterizedString;
+
+                        return { number: index, action: actionData._text, expectedResult: expectedResultData._text };
+                    });
+
+                    return [ ...acc, { name, steps: steps}];
                 }, [] as any []);
 
 
@@ -40,7 +46,7 @@ SDK.register("export-test-data", () => {
             }
 
  
-            dialogSvc.openMessageDialog(`${JSON.stringify(suitesData)}` , { showCancel: false });
+            dialogSvc.openCustomDialog("export-preview");
         }
     }
 });

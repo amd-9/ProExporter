@@ -36,6 +36,17 @@
                 "uri": "dist/Exporter.html",
                 "registeredObjectId": "export-test-data"
             }
+        },
+        {
+            "id": "export-preview-panel",
+            "type": "amd9.proexporter.preview",
+            "targets": [
+                "ms.vss-test-web.test-plans-suites-context"
+            ],
+            "properties": {
+                "uri": "dist/Preview.html",
+                "registeredObjectId": "export-preview"
+            }
         }
     ],
     "files": [
