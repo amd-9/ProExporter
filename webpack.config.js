@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = {
     entry: {
       Exporter: "./" + path.relative(process.cwd(), path.join(__dirname, "src", "Exporter.ts")),
-      Preview: "./" + path.relative(process.cwd(), path.join(__dirname, "src", "Preview.tsx"))
+      Preview: "./" + path.relative(process.cwd(), path.join(__dirname, "src/Components/Preview", "Preview.tsx"))
     },
     output: {
         filename: "[name].js",
