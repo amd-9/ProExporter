@@ -9,7 +9,7 @@
     "compile:dev": "npm run clean && webpack --mode development",
     "build": "npm run compile",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --hot --progress --static ./ --https --port 8888"
+    "dev": "webpack-dev-server --mode development --hot --progress --static ./static --server-type https --port 8888"
   },
   "keywords": [],
   "author": "",

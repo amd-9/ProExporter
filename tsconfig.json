@@ -21,6 +21,13 @@
             "jest",
             "node"
         ],
-        "esModuleInterop": true
-    }
+        "esModuleInterop": true,
+        "noEmit": false,
+        "baseUrl": ".",
+        "paths": { 
+        "azure-devops-extension-api": ["node_modules/azure-devops-extension-api" ]
+        }
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "dist"]
 }

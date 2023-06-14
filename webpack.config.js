@@ -4,19 +4,20 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: {
-      Exporter: './src/Exporter.ts'
+      Exporter: "./" + path.relative(process.cwd(), path.join(__dirname, "src", "Exporter.ts"))
     },
     output: {
-        filename: "[name]/[name].js"
+        filename: "[name].js",
+        path:  path.resolve(__dirname, 'dist'),
+        publicPath: "/dist"    
     },
+    devtool: "inline-source-map",
     resolve: {
         extensions: [".ts", ".tsx", ".js"],
         alias: {
             "azure-devops-extension-sdk": path.resolve("node_modules/azure-devops-extension-sdk")
         },
-    },
-    stats: {
-        warnings: false
+        modules: [path.resolve("."), "node_modules"]
     },
     module: {
         rules: [
@@ -39,15 +40,15 @@ module.exports = {
                 }]
             },
             {
-                test: /\.html$/,
-                loader: "file-loader"
+                test: /\.(png|svg|jpg|gif|html)$/,
+                use: "file-loader"
             }
         ]
     },
     plugins: [
         new CopyWebpackPlugin({
            patterns: [ 
-               { from: "**/*.html", context: "src" }
+            { from: "**/*.html", to: "./", context: "src" },
            ]
         })
     ]
