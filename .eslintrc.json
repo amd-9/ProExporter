@@ -1,0 +1,99 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "import",
+      "unused-imports"
+    ],
+    "extends": [
+      "airbnb",
+      "airbnb-typescript",
+      "airbnb/hooks",
+      "prettier",
+      "plugin:jsx-a11y/recommended"
+    ],
+    "root": true,
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "node": true,
+      "jest": true
+    },
+    "rules": {
+      "quotes": [
+        1,
+        "single",
+        {
+          "avoidEscape": true
+        }
+      ],
+      "no-plusplus": "off",
+      "@typescript-eslint/no-use-before-define": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "no-param-reassign": "off",
+      "prefer-destructuring": "off",
+      "no-console": "off",
+      "consistent-return": "off",
+      "react/state-in-constructor": "off",
+      "react/destructuring-assignment": "off",
+      "react/function-component-definition": [
+        2,
+        {
+          "namedComponents": "arrow-function",
+          "unnamedComponents": "arrow-function"
+        }
+      ],
+      "react/no-unused-state": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react/prop-types": "off",
+      "react/no-unescaped-entities": [
+        "error",
+        {
+          "forbid": [
+            ">",
+            "}",
+            "'"
+          ]
+        }
+      ],
+      "react/no-did-update-set-state": "off",
+      "react/no-array-index-key": "off",
+      "no-useless-catch": "off",
+      "prefer-template": "off",
+      "no-case-declarations": "off",
+      "no-extra-boolean-cast": "off",
+      "no-return-assign": "off",
+      "jsx-a11y/anchor-is-valid": "off",
+      "jsx-a11y/label-has-associated-control": "off",
+      "jsx-a11y/mouse-events-have-key-events": "off",
+      "jsx-a11y/no-autofocus": "off",
+      "import/no-cycle": "off",
+      "import/order": [
+        "warn",
+        {
+          "groups": [
+            [
+              "builtin",
+              "external"
+            ]
+          ],
+          "newlines-between": "always-and-inside-groups"
+        }
+      ],
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": true
+        }
+      ],
+      "unused-imports/no-unused-imports": "error",
+      "unused-imports/no-unused-vars": "error",
+      "no-await-in-loop": "off",
+      "no-restricted-syntax": "off",
+      "no-underscore-dangle": "off"
+    }
+  }
+  
