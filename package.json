@@ -30,8 +30,13 @@
   "devDependencies": {
     "@types/react": "~16.8.2",
     "@types/react-dom": "~16.8.0",
+    "base64-inline-loader": "^2.0.1",
     "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
     "rimraf": "^5.0.1",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
     "ts-jest": "^29.1.0",
     "ts-loader": "^9.4.3",
     "typescript": "^5.1.3",
