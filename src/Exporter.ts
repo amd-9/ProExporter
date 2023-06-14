@@ -47,8 +47,11 @@ SDK.register("export-test-data", () => {
 
             const extensionCtx = SDK.getExtensionContext();
             const contributionId = extensionCtx.publisherId + "." + extensionCtx.extensionId + ".export-preview";
+
+            console.log(`Contribution id is: ${contributionId}`)
  
-            dialogSvc.openCustomDialog(contributionId);
+            // dialogSvc.openCustomDialog(contributionId);
+            dialogSvc.openMessageDialog(`${JSON.stringify(suitesData)}` , { showCancel: false });
         }
     }
 });
