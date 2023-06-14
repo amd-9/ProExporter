@@ -1,6 +1,6 @@
 {
   "name": "proexporter",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Azure DevOps extension for exporting Work items in varous output formats",
   "main": "index.js",
   "scripts": {
