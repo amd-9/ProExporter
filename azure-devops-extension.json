@@ -38,12 +38,10 @@
             }
         },
         {
-            "id": "export-preview",
-            "type": "ms.vss-web.control",
-            "targets": [],
+            "id": "panel-export-preview",
+            "type": "ms.vss-web.external-content",
             "properties": {
-                "uri": "dist/Preview.html",
-                "registeredObjectId": "export-preview"
+                "uri": "dist/Components/Preview/Preview.html"
             }
         }
     ],

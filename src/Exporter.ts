@@ -45,13 +45,9 @@ SDK.register("export-test-data", () => {
                 suitesData = [ ...suitesData, { suiteName: suite.name, testCases: casesWithSteps}] 
             }
 
-            const extensionCtx = SDK.getExtensionContext();
-            const contributionId = extensionCtx.publisherId + "." + extensionCtx.extensionId + ".export-preview";
-
-            console.log(`Contribution id is: ${contributionId}`)
- 
-            // dialogSvc.openCustomDialog(contributionId);
-            dialogSvc.openMessageDialog(`${JSON.stringify(suitesData)}` , { showCancel: false });
+                        
+             dialogSvc.openCustomDialog(SDK.getExtensionContext().id +".panel-export-preview");
+            //dialogSvc.openMessageDialog(`${JSON.stringify(suitesData)}` , { showCancel: false });
         }
     }
 });
