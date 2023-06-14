@@ -7,6 +7,9 @@
     "clean": "rimraf ./dist",
     "compile": "npm run clean && webpack --mode production",
     "compile:dev": "npm run clean && webpack --mode development",
+    "package:release": "tfx extension create --rev-version --manifest-globs azure-devops-extension.json",
+    "package:current": "tfx extension create --manifest-globs azure-devops-extension.json",
+    "publish": "tfx extension publish --manifest-globs azure-devops-extension.json",
     "build": "npm run compile",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --mode development --hot --progress --static ./ --server-type https --port 8888"
