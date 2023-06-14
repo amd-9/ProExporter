@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "proexporter",
     "publisher": "amd9",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "name": "ProExporter",
     "description": "Azure DevOps extension for exporting Work items in various output formats",
     "public": false,
