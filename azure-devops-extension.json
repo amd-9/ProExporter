@@ -13,6 +13,7 @@
             "id": "Microsoft.VisualStudio.Services"
         }
     ],
+    "scopes": ["vso.test_write"],
     "icons": {
         "default": "static/export.png"
     },
