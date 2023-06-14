@@ -45,8 +45,10 @@ SDK.register("export-test-data", () => {
                 suitesData = [ ...suitesData, { suiteName: suite.name, testCases: casesWithSteps}] 
             }
 
+            const extensionCtx = SDK.getExtensionContext();
+            const contributionId = extensionCtx.publisherId + "." + extensionCtx.extensionId + ".export-preview";
  
-            dialogSvc.openCustomDialog("export-preview");
+            dialogSvc.openCustomDialog(contributionId);
         }
     }
 });

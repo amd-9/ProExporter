@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "proexporter",
     "publisher": "amd9",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "name": "ProExporter",
     "description": "Azure DevOps extension for exporting Work items in various output formats",
     "public": false,
@@ -38,11 +38,9 @@
             }
         },
         {
-            "id": "export-preview-panel",
-            "type": "amd9.proexporter.preview",
-            "targets": [
-                "ms.vss-test-web.test-plans-suites-context"
-            ],
+            "id": "export-preview",
+            "type": "ms.vss-web.control",
+            "targets": [],
             "properties": {
                 "uri": "dist/Preview.html",
                 "registeredObjectId": "export-preview"
